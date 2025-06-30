@@ -1,103 +1,68 @@
 body {
-  background: white;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: #fffafc;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  padding: 2rem;
   position: relative;
+  overflow-x: hidden;
 }
 
 .container {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
   max-width: 600px;
-  margin: 100px auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin: auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.2);
+  padding: 2rem;
   position: relative;
   z-index: 10;
-  text-align: center;
 }
 
 h1 {
-  font-size: 1.6em;
-  margin-bottom: 30px;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #333;
+  letter-spacing: -0.3px;
 }
 
-.category-buttons {
+.checkbox-group,
+.subgroup {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.category-buttons button {
-  background: #fce4ec;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
+.checkbox-group label,
+.subgroup label {
+  background-color: #fce4ec;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
   cursor: pointer;
-  font-size: 1em;
-  transition: 0.3s;
+  transition: background-color 0.2s ease;
 }
 
-.category-buttons button:hover {
-  background: #f8bbd0;
+.checkbox-group label:hover,
+.subgroup label:hover {
+  background-color: #f8bbd0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.subgroup p {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-label {
-  font-size: 1.2em;
+.hidden {
+  display: none;
 }
 
-textarea {
-  width: 80%;
-  max-width: 500px;
-  padding: 15px;
-  border: 2px solid #eee;
-  border-radius: 10px;
-  font-size: 1em;
-  resize: vertical;
-}
-
-form button {
-  background: #ffc0cb;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: 0.3s;
-}
-
-form button:hover {
-  background: #ffb6c1;
-}
-
-.floating-emoji {
+/* Falling emoji canvas */
+#emojiCanvas {
   position: fixed;
-  z-index: 0;
-  animation: floatDown linear infinite;
-  font-size: 24px;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  opacity: 0.9;
-}
-
-@keyframes floatDown {
-  0% {
-    transform: translateY(-10vh);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
+  z-index: 1;
 }
