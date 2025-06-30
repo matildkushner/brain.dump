@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>brain dump 🌸</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🍒 what kind of thoughts do you need to dump?</h1>
+      <div class="category-buttons">
+        <button onclick="selectCategory('work')">⬜ work stuff</button>
+        <button onclick="selectCategory('personal')">⬜ personal life</button>
+        <button onclick="selectCategory('creative')">⬜ creative ideas</button>
+        <button onclick="selectCategory('random')">⬜ random ramblings</button>
+      </div>
+
+      <form id="promptForm" style="display:none;">
+        <label id="promptLabel"></label>
+        <textarea placeholder="write anything here..." rows="5"></textarea>
+        <button type="submit">save ✨</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="emoji-float.js"></script>
+  </body>
+</html>
